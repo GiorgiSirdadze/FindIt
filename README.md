@@ -96,3 +96,18 @@ If you find any bugs or want to request new features, please open an issue.
 
 - 🔔 **Push Notifications**: Add real-time notifications for new messages or posts to enhance user engagement.
 - 🗺️ **Map Integration**: Enhance the map functionality with better location markers and geofencing for item locations.
+
+## 👥 Team Members
+
+- **Giorgi Sirdadze** 
+- **Sergi Arabidze** 
+
+---
+
+## 🔁 Repo Note
+
+The original repository was hosted on [sergiarabidze/FindIt](https://github.com/sergiarabidze/FindIt).  
+I created this version to showcase my own contributions and improvements. All code pushed here was written or co-developed by me.
+
+---
+
