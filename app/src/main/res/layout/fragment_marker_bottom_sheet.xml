@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_top_background"
+    android:padding="20dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="gela barkalaia"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_post_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="davkarge chanta dzaan magari"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnViewPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_post"
+        android:backgroundTint="@color/holo_blue_dark"
+        android:textColor="@color/white" />
+
+</LinearLayout>

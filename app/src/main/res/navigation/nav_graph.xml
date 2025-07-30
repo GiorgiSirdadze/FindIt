@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+    android:id="@+id/loginFragment"
+    android:name="com.example.findit.presentation.screen.login.LoginFragment"
+    android:label="fragment_login"
+    tools:layout="@layout/fragment_login" >
+
+    <action
+        android:id="@+id/action_loginFragment_to_registerFragment"
+        app:destination="@id/registerFragment" />
+
+    <action
+        android:id="@+id/action_loginFragment_to_homeFragment"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+</fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.findit.presentation.screen.register.RegisterFragment"
+        android:label="RegisterFragment" >
+
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.example.findit.presentation.screen.addpost.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_addPostFragment_to_imageOptionDialog"
+            app:destination="@id/imageOptionDialog" />
+        <action
+            android:id="@+id/action_addPostFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addPostFragment_to_markFragment"
+            app:destination="@id/markFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.findit.presentation.screen.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.findit.presentation.screen.location.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_markerBottomSheet"
+            app:destination="@id/markerBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.findit.presentation.screen.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myPostsFragment"
+            app:destination="@id/myPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.findit.presentation.screen.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.findit.presentation.screen.editprofile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_imageOptionDialog"
+            app:destination="@id/imageOptionDialog" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/imageOptionDialog"
+        android:name="com.example.findit.presentation.screen.add_image_dialog.ImageOptionDialog"
+        android:label="ImageOptionDialog" />
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.findit.presentation.screen.post.PostFragment"
+        android:label="PostFragment" >
+        <argument
+            android:name="postId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_postFragment_to_viewLocationFragment2"
+            app:destination="@id/viewLocationFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewLocationFragment"
+        android:name="com.example.findit.presentation.screen.view_location.ViewLocationFragment"
+        android:label="ViewLocationFragment" >
+        <argument
+            android:name="postId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/markFragment"
+        android:name="com.example.findit.presentation.screen.mark.MarkFragment"
+        android:label="MarkFragment" />
+    <dialog
+        android:id="@+id/markerBottomSheet"
+        android:name="com.example.findit.presentation.screen.marker.MarkerBottomSheet"
+        android:label="MarkerBottomSheet" >
+        <argument
+            android:name="postId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_markerBottomSheet_to_postFragment"
+            app:destination="@id/postFragment" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument android:name="description" />
+    </dialog>
+    <fragment
+        android:id="@+id/myPostsFragment"
+        android:name="com.example.findit.presentation.screen.my_posts.MyPostsFragment"
+        android:label="fragment_my_posts"
+        tools:layout="@layout/fragment_my_posts" />
+
+
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.findit.presentation.screen.chat.ChatFragment"
+        android:label="ChatFragment" >
+        <argument
+            android:name="receiverId"
+            app:argType="string"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.example.findit.presentation.screen.chatlist.ChatListFragment"
+        android:label="ChatListFragment" >
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+</navigation>

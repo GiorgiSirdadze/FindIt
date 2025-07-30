@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_ic"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/chatListFragment"
+        android:icon="@drawable/chat_icon"
+        android:title="@string/chat"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/addPostFragment"
+        android:icon="@drawable/add_post_ic"
+        android:title="@string/add_post"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/locationFragment"
+        android:icon="@drawable/location_ic"
+        android:title="@string/location"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_ic"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />
+
+</menu>
